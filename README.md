@@ -47,8 +47,8 @@ A entrada ServiceTypes refere-se ao tipo de plug-in que este arquivo da área de
 A linha `MimeType` define o tipo de arquivo ao qual este menu de serviço se aplica. Você pode definir mais de um tipo `MIME` fornecendo uma lista separada por ponto e vírgula (mas sem espaços). Nesse caso, nosso menu de serviço aparecerá quando selecionarmos imagens `PNG` ou `JPEG`. O painel de controle Associações de Arquivos é um bom lugar para procurar definições de tipo mime.
 
 ## Dica
-Para criar um menu de serviço para diretórios, use o `inode/directory mimetype`. Para criar um menu de serviço para todos os arquivos, use o `application/octet-stream mimetype` base
-Você também pode especificar um grupo inteiro de mimetypes usando `“typeglobs”`. Para fazer com que nosso menu de serviço se aplique não apenas a `PNGs` e `JPEGs`, mas a todas as imagens, basta alterar a entrada `ServiceTypes` para:
+- Para criar um menu de serviço para diretórios, use o `inode/directory mimetype`. Para criar um menu de serviço para todos os arquivos, use o `application/octet-stream mimetype` base
+- Você também pode especificar um grupo inteiro de mimetypes usando `“typeglobs”`. Para fazer com que nosso menu de serviço se aplique não apenas a `PNGs` e `JPEGs`, mas a todas as imagens, basta alterar a entrada `ServiceTypes` para:
 ```
 X-KDE-ServiceTypes=KonqPopupMenu/Plugin
 MimeType=image/*;
@@ -60,7 +60,7 @@ Actions=setAsWallpaper
 A entrada Actions define as ações que criaremos em nosso servicemenu. Assim como nos `ServiceTypes`, você pode definir mais de uma ação usando uma lista separada por ponto e vírgula. Cada uma das ações listadas terá uma seção própria definindo o que essa ação faz. Na verdade, esse é o nosso próximo passo.
 
 ### Criando uma ação
-Até agora, definimos uma ação em nosso arquivo de menu de serviço: `setAsWallpaper`. Agora precisamos definir como essa ação se parece e o que ela realmente faz. Começamos adicionando um novo cabeçalho ao final do nosso arquivo:
+- Até agora, definimos uma ação em nosso arquivo de menu de serviço: `setAsWallpaper`. Agora precisamos definir como essa ação se parece e o que ela realmente faz. Começamos adicionando um novo cabeçalho ao final do nosso arquivo:
 ```
 [Desktop Action setAsWallpaper]
 ```
@@ -98,7 +98,7 @@ Exec=qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
 Se o salvarmos e abrirmos o Dolphin, ao clicarmos com o botão direito do mouse em uma imagem PNG, JPEG ou GIF, teremos agora um item `“Definir como plano de fundo”` no menu. Experimente!
 
 ### Dica
-Se você tiver uma tarefa complexa que requer mais de um comando __(por exemplo, se quisermos copiar o arquivo de imagem em algum lugar primeiro e depois usar o `D-Bus` para defini-lo como plano de fundo)__, use um shell:
+- Se você tiver uma tarefa complexa que requer mais de um comando __(por exemplo, se quisermos copiar o arquivo de imagem em algum lugar primeiro e depois usar o `D-Bus` para defini-lo como plano de fundo)__, use um shell:
 ```
 Exec=/bin/sh -c ";<YOUR COMMANDS HERE>"
 ```
@@ -151,14 +151,14 @@ Exec=qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
 - `Protocolos X-KDE`	Requer que o esquema dos URLs esteja contido na lista, por exemplo:
 `file,smb`
 
-`X-KDE-RequiredNumberOfUrls`	Número de URLs que podem ser selecionados para que este menu seja exibido. Para permitir várias combinações, você pode separar os números com uma vírgula, por exemplo: `2,4,6`
+- `X-KDE-RequiredNumberOfUrls`	Número de URLs que podem ser selecionados para que este menu seja exibido. Para permitir várias combinações, você pode separar os números com uma vírgula, por exemplo: `2,4,6`
 
-`X-KDE-MinNumberOfUrls`	Número mínimo de URLs que podem ser selecionados para que este menu seja exibido. Esta propriedade está disponível desde a versão: `5.76`
-`X-KDE-MaxNumberOfUrls`	Número máximo de URLs que podem ser selecionados para que este menu seja exibido. Esta propriedade está disponível desde a versão: `5.76`
+- `X-KDE-MinNumberOfUrls`	Número mínimo de URLs que podem ser selecionados para que este menu seja exibido. Esta propriedade está disponível desde a versão: `5.76`
+- `X-KDE-MaxNumberOfUrls`	Número máximo de URLs que podem ser selecionados para que este menu seja exibido. Esta propriedade está disponível desde a versão: `5.76`
 
-Se você precisar de opções mais dinâmicas, confira `KAbstractFileItemActionPlugin` sobre como escrever esses plugins em `C++`.
+### Se você precisar de opções mais dinâmicas, confira `KAbstractFileItemActionPlugin` sobre como escrever esses plugins em `C++`.
 
 ### Exemplos
-Esta é uma lista de menus de serviço contribuídos pelo usuário. Sinta-se à vontade para adicionar seus próprios menus de serviço personalizados aqui, se achar que eles podem ser usados ​​por outras pessoas.
+- Esta é uma lista de menus de serviço contribuídos pelo usuário. Sinta-se à vontade para adicionar seus próprios menus de serviço personalizados aqui, se achar que eles podem ser usados ​​por outras pessoas.
 
 Menus de serviço KDE da Z-Ray Entertainment
