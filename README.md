@@ -156,7 +156,7 @@ Exec=qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
 - `X-KDE-MinNumberOfUrls`	Número mínimo de URLs que podem ser selecionados para que este menu seja exibido. Esta propriedade está disponível desde a versão: `5.76`
 - `X-KDE-MaxNumberOfUrls`	Número máximo de URLs que podem ser selecionados para que este menu seja exibido. Esta propriedade está disponível desde a versão: `5.76`
 
-### Se você precisar de opções mais dinâmicas, confira `KAbstractFileItemActionPlugin` sobre como escrever esses plugins em `C++`.
+___Se você precisar de opções mais dinâmicas, confira `KAbstractFileItemActionPlugin` sobre como escrever esses plugins em `C++`___.
 
 ### Exemplos
 - Esta é uma lista de menus de serviço contribuídos pelo usuário. Sinta-se à vontade para adicionar seus próprios menus de serviço personalizados aqui, se achar que eles podem ser usados ​​por outras pessoas.
