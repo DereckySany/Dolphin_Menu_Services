@@ -1,5 +1,5 @@
 # Criando Menus de Serviço Dolphin
-## Aprenda a criar menus de serviço de golfinhos
+## Aprenda a criar menus de serviço para o Dolphin.
 - A capacidade de selecionar ações específicas do tipo mime no menu de contexto de um gerenciador de arquivos do KDE é um recurso frequentemente solicitado. A agradável surpresa é que isso já é possível. A surpresa ainda mais agradável é que você não precisa ser um desenvolvedor de software para criar novas ações. Este artigo detalha passo a passo como adicionar novas ações rápida e facilmente aos menus de contexto do gerenciador de arquivos do KDE.
 
 ## Introdução
